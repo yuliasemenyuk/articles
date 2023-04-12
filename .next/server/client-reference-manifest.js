@@ -133,9 +133,6 @@ self.__RSC_MANIFEST={
   },
   "__edge_ssr_module_mapping__": {},
   "__entry_css_files__": {
-    "/Users/uliasemenuk/projects/articles/app/page": [
-      "static/css/app/page.css"
-    ],
     "/Users/uliasemenuk/projects/articles/app/layout": [
       "static/css/_app-client_app_globals_css.css"
     ]
@@ -331,13 +328,6 @@ self.__RSC_MANIFEST={
     ],
     "name": "default",
     "async": false
-  },
-  "/Users/uliasemenuk/projects/articles/app/page.module.css#": {
-    "id": "null",
-    "name": "",
-    "chunks": [
-      "static/css/app/page.css"
-    ]
   },
   "/Users/uliasemenuk/projects/articles/app/page.tsx": {
     "id": "(app-client)/./app/page.tsx",
