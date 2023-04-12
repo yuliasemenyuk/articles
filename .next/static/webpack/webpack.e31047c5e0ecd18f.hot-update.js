@@ -71,7 +71,7 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 
 /******/ /* webpack/runtime/getFullHash */
 /******/ !function() {
-/******/ 	__webpack_require__.h = function() { return "1348626b6c7da6b4"; }
+/******/ 	__webpack_require__.h = function() { return "96705fae4ecc6edd"; }
 /******/ }();
 /******/ 
 /******/ /* webpack/runtime/make namespace object */
@@ -142,7 +142,7 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 		var cssChunks = {"_app-client_app_globals_css":1,"_app-client_app_page_module_css":1,"_app-client_node_modules_next_font_google_target_css_path_app_page_tsx_import_Inter_arguments-2f8da4":1};
+/******/ 		var cssChunks = {"_app-client_app_page_module_css":1,"_app-client_node_modules_next_font_google_target_css_path_app_page_tsx_import_Inter_arguments-2f8da4":1,"_app-client_app_globals_css":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {
