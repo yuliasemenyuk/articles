@@ -6,8 +6,5 @@ self.__RSC_CSS_MANIFEST={
   },
   "/Users/uliasemenuk/projects/articles/app/layout.tsx": [
     "/Users/uliasemenuk/projects/articles/app/globals.css"
-  ],
-  "/Users/uliasemenuk/projects/articles/app/page.tsx": [
-    "/Users/uliasemenuk/projects/articles/app/page.module.css"
   ]
 }
