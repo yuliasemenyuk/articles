@@ -2,7 +2,7 @@ import axios from "axios";
 
 const { SERVER_HOST: HOST } = process.env;
 
-axios.defaults.baseURL = 'http://195.201.105.40:4000/api/article';
+axios.defaults.baseURL = 'https://energy.kaaiot.com/api/articles';
 
 export default async function getArticle(id: string) {
     try {
