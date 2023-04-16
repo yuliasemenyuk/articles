@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const { REACT_APP_SERVER_HOST: HOST } = process.env;
+const { SERVER_HOST: HOST } = process.env;
 
-axios.defaults.baseURL = 'http://localhost:4000/api/article';
+axios.defaults.baseURL = 'http://195.201.105.40:4000/api/article';
 
 export default async function getArticle(id: string) {
     try {

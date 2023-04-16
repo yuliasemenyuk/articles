@@ -3,21 +3,7 @@ import axios from "axios";
 
 const { SERVER_HOST: HOST } = process.env;
 
-axios.defaults.baseURL = 'http://localhost:4000/api/article';
-// axios.defaults.baseURL = HOST;
-
-
-// export const generateArticles = async (url: string) => 
-//     await axios.post('/', 
-//     url
-//   )
-//   .then(function (response) {
-//     console.log(response.data);
-//     return response.data;
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
+axios.defaults.baseURL = 'http://195.201.105.40:4000/api/article';
 
 
 export const generateArticles = 
@@ -27,11 +13,7 @@ export const generateArticles =
         {
           url: url
         });
-        console.log(response.data);
-        // console.log(HOST);
-        
         return response.data;
-        
         
       } catch (error) {
         console.log(error);

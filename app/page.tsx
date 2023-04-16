@@ -4,7 +4,6 @@ import { useState, FormEvent} from "react";
 import { generateArticles } from " @component/utils/generateArticles";
 import getArticle from " @component/utils/getArticle";
 import ClipLoader from "react-spinners/ClipLoader";
-import Image from 'next/image'
 
 type ArtData = {
   _id: string
