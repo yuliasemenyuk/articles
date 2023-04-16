@@ -1,17 +1,17 @@
-"use client";
-
-import { Grammarly, GrammarlyEditorPlugin } from "@grammarly/editor-sdk-react";
-import { useState, FormEvent, useEffect } from "react";
+'use client'
+import { GrammarlyEditorPlugin } from "@grammarly/editor-sdk-react";
+import { useState, FormEvent} from "react";
 import { generateArticles } from " @component/utils/generateArticles";
 import getArticle from " @component/utils/getArticle";
 import ClipLoader from "react-spinners/ClipLoader";
-import Link from "next/link";
+import Image from 'next/image'
 
 type ArtData = {
   _id: string
   artTitle: string
   body: string
   meta?: object
+  image?: string
 };
 
 export default function Home() {
@@ -22,19 +22,20 @@ export default function Home() {
   const articlesList = async (id: string) => {
     console.log(id);
     const art = await getArticle(id);
+    console.log(art);
+    
     setArticles((prevArticles) => [...prevArticles, art]);
-    console.log(articles);
   };
 
   const handleSubmit = async (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
-    setLoading(true)
+    setLoading(true);
     const ids = await generateArticles(url);
      
     ids.forEach((id: string) => {
       articlesList(id);
     });
-    setLoading(false)
+    setLoading(false);
   };
 
   return (
@@ -59,32 +60,32 @@ export default function Home() {
           <button
             className="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded hover:bg-blue-700 focus:bg-blue-700"
             type="submit"
-            // disabled={isLoading}
           >
             Generate articles
           </button>
         </form>
         {loading && (
-          <div>
-            <p>Plese wait. The magic is happening...</p>
+          <div className="flex items-center justify-center">
+            <p className="mr-2">Please wait. The magic is happening...</p>
             <ClipLoader />
           </div>
         )}
 
         {articles.length !== 0 && (
-          <div>
-            <ul>
-              {articles.map((article) => (
-                <li key={article._id}>
-                  <h2>{article.artTitle}</h2>
-                  <p>{article.body}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+         <div>
+         <ul>
+           {articles.map((article) => (
+             <li key={article._id} className="mb-8">
+               <h2 className="text-2xl font-bold mb-2">{article.artTitle}</h2>
+               <img src={article.image} alt={article.artTitle} />
+               <GrammarlyEditorPlugin clientId="client_JqTPMhBNkcRiyaAeyiusv4" >
+               <p className="prose dark:prose-dark mb-4">{article.body}</p>
+               </GrammarlyEditorPlugin>
+             </li>
+           ))}
+         </ul>
+       </div>
         )}
-
-        {/* {ids.length !== 0 && <Link href='articles'>Done! Click to get your articles</Link>} */}
       </section>
     </main>
   );
