@@ -3,7 +3,7 @@ import axios from "axios";
 
 const { SERVER_HOST: HOST } = process.env;
 
-axios.defaults.baseURL = 'https://energy.kaaiot.com/api/articles';
+axios.defaults.baseURL = 'https://energy.kaaiot.com/api/article';
 
 
 export const generateArticles = 
