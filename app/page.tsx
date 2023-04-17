@@ -76,7 +76,7 @@ export default function Home() {
            {articles.map((article) => (
              <li key={article._id} className="mb-8">
                <h2 className="text-2xl font-bold mb-2">{article.artTitle}</h2>
-               <img src={article.image} alt={article.artTitle} />
+               <img className="w-60 h-60" src={article.image} alt={article.artTitle} />
                <GrammarlyEditorPlugin clientId="client_JqTPMhBNkcRiyaAeyiusv4" >
                <p className="prose dark:prose-dark mb-4">{article.body}</p>
                </GrammarlyEditorPlugin>
